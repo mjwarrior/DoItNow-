@@ -51,11 +51,11 @@ class TasksViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         let task2 = Task()
         task2.name = "learn spanish"
-        task2.important = false
+        task2.important = true
         
         let task3 = Task()
         task3.name = "make sure nena dosen't eat my dessert "
-        task3.important = true
+        task3.important = false
         
         return [task1,task2,task3]
         
