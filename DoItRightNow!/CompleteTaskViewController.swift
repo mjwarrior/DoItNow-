@@ -13,7 +13,7 @@ class CompleteTaskViewController: UIViewController {
     
     @IBOutlet weak var taskLabel: UILabel!
     var task = Task()
-    
+    var previousVC = TasksViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,9 @@ class CompleteTaskViewController: UIViewController {
 
     
     @IBAction func completeTapped(_ sender: AnyObject) {
+    previousVC.tasks.remove(at: previousVC.selectedIndex)
+    previousVC.tableView.reloadData()
+    navigationController!.popViewController(animated: true)
     }
     
     
